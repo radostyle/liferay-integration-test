@@ -34,13 +34,6 @@
 			<version>1.1.2</version>
 		</dependency>
 
-		<dependency>
-		    <groupId>log4jdbc</groupId>
-		    <artifactId>log4jdbc</artifactId>
-		    <version>1.1</version>
-		    <scope>test</scope>
-		</dependency>
-
 		<!-- 
 			Pull in everything including the kitchen sink for testing so we can test the services outside the
 			container
