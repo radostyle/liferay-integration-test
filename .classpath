@@ -106,7 +106,6 @@
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/liferay-rhino/5.2.3/liferay-rhino-5.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/liferay-yuicompressor/5.2.3/liferay-yuicompressor-5.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/log4j/5.2.3/log4j-5.2.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/log4jdbc/log4jdbc/1.1/log4jdbc-1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/lucene/5.2.3/lucene-5.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/lucene-highlighter/5.2.3/lucene-highlighter-5.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/commsen/liferay/portal/libraries/mirage-api/5.2.3/mirage-api-5.2.3.jar"/>
