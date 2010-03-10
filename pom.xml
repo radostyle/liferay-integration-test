@@ -215,6 +215,7 @@
 					<target>1.5</target>
 				</configuration>
 			</plugin>
+			<!-- Exclude base test cases from test runs -->
 			<plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
