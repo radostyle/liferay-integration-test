@@ -215,6 +215,47 @@
 					<target>1.5</target>
 				</configuration>
 			</plugin>
+			<plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+				<execution>
+				  <id>unit-tests</id>
+				  <phase>test</phase>
+				  <goals>
+					<goal>test</goal>
+				  </goals>
+				  <configuration>
+					<skip>false</skip>
+					<excludes>
+					  <exclude>**/BaseTestCase.java</exclude>
+					  <exclude>**/BasePersistenceTestCase.java</exclude>
+					  <exclude>**/Test*$*.java</exclude>
+					</excludes>
+				  </configuration>
+				</execution>
+                    <execution>
+                        <id>integration-tests</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <skip>false</skip>
+                            <includes>
+                                <include>**/*IntegrationTest.java</include>
+                            </includes>
+							<excludes>
+							  <!-- Don't run integration tests as part of the normal build since they take too long -->
+							  <exclude>**/ShoppingCartPersistenceIntegration*.java</exclude>
+							</excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>		
 		</plugins>
+
 	</build>
 </project>
