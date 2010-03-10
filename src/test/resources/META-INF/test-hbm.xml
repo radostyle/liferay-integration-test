@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="com.liferay.portal.model.impl.AddressImpl" table="Address">
+		<cache usage="read-write" />
+		<id name="addressId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="classNameId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="classPK" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="street1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="street2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="street3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="zip" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="regionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="typeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="mailing" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="primary" column="primary_" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+
+	<class name="com.liferay.counter.model.Counter" table="Counter">
+		<id name="name" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="currentId" type="long" />
+	</class>
+	<class name="com.liferay.portal.model.impl.CompanyImpl" table="Company">
+		<cache usage="read-write" />
+		<id name="companyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="accountId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="webId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="key" column="key_" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="virtualHost" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mx" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="homeURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="logoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="system" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.liferay.portal.model.impl.PortletImpl" table="Portlet">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="portletId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="roles" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="active" column="active_" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.liferay.portal.model.impl.PortletPreferencesImpl" table="PortletPreferences">
+		<cache usage="read-write" />
+		<id name="portletPreferencesId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ownerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ownerType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="plid" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="portletId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="preferences" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>
